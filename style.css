@@ -1,0 +1,610 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    overflow-x: hidden;
+    transition: all 0.5s ease;
+    animation: bgColorChange 10s infinite alternate;
+}
+
+/* Header */
+header {
+    background-color: #181818;
+    padding: 15px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    animation: fadeInDown 1s;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1DB954;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: bounce 2s infinite;
+}
+
+.logo i {
+    margin-right: 10px;
+    font-size: 1.8em;
+    animation: spin 3s linear infinite;
+}
+
+/* Navbar Transparan Blur saat Scroll */
+header {
+    background-color: rgba(24, 24, 24, 1); /* Warna solid awal */
+    transition: background-color 0.5s, backdrop-filter 0.5s;
+}
+
+header.scrolled {
+    background-color: rgba(24, 24, 24, 0.6); /* Warna transparan saat scroll */
+    backdrop-filter: blur(10px); /* Efek blur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    animation: zoomIn 1s;
+}
+
+.nav-links a:hover {
+    color: #1DB954;
+    transform: scale(1.1);
+    text-shadow: 0px 0px 8px rgba(29, 185, 84, 0.8);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1DB954, #1a1a1a);
+    color: #fff;
+    background-size: 400% 400%;
+    animation: gradientMove 8s infinite alternate, slideInUp 1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s infinite alternate;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: shimmer 3s infinite;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite alternate;
+}
+
+.btn {
+    background-color: #1DB954;
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+    animation: jello 1.5s infinite;
+}
+
+.btn:hover {
+    background-color: #14833b;
+    transform: scale(1.1) rotate(-2deg);
+    box-shadow: 0px 4px 15px rgba(29, 185, 84, 0.6);
+}
+
+/* Cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 50px 20px;
+    animation: fadeIn 2s;
+}
+
+.card {
+    background-color: #181818;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    animation: float 4s ease-in-out infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card i {
+    font-size: 2.5em;
+    color: #1DB954;
+    margin-bottom: 10px;
+    animation: spin 5s linear infinite;
+}
+
+/* Tambahkan efek shadow pada semua teks */
+body, h1, h2, h3, p, a, .btn, .logo {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* Shadow khusus untuk header */
+header .logo {
+    text-shadow: 2px 2px 12px rgba(29, 185, 84, 0.8);
+}
+
+/* Shadow animasi pada judul hero */
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: fadeInUp 2s infinite alternate;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 4px 4px 10px rgba(255, 255, 255, 0.5), 
+                 -2px -2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Shadow untuk tombol */
+.btn {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Shadow pada link navigasi */
+.nav-links a {
+    text-shadow: 1px 1px 5px rgba(29, 185, 84, 0.8);
+}
+
+/* Shadow untuk card */
+.card i {
+    text-shadow: 3px 3px 10px rgba(29, 185, 84, 0.8);
+}
+
+/* Shadow di footer */
+footer {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Footer */
+footer {
+    background-color: #181818;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 1s;
+}
+
+/* Music Player Section */
+.music-player {
+    background: rgba(18, 18, 18, 0.8);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    color: white;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1.5s;
+}
+
+.music-player::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(29, 185, 84, 0.2), rgba(255, 255, 255, 0.1), rgba(18, 18, 18, 0.5));
+    animation: rotateBg 10s linear infinite;
+    z-index: -1;
+    filter: blur(30px);
+}
+
+.music-player h2, .music-player h3 {
+    margin-bottom: 1rem;
+    color: #1DB954;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: pulseText 2s infinite alternate;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    animation: slideIn 1s;
+}
+
+/* Music Disc Style */
+.music-disc {
+    font-size: 4rem;
+    color: #1DB954;
+    transition: transform 0.5s, color 0.5s;
+    filter: drop-shadow(0 0 15px #1DB954);
+}
+
+.music-disc.playing {
+    animation: rotateDisc 3s linear infinite;
+    color: #14833b;
+    filter: drop-shadow(0 0 25px #14833b);
+}
+
+/* Audio */
+audio {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 5px;
+    outline: none;
+    background: rgba(29, 185, 84, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+audio:hover {
+    box-shadow: 0 8px 20px rgba(29, 185, 84, 0.8);
+    transform: scale(1.05);
+}
+
+/* Song Info */
+.song-info {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 2s;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: fadeInUp 1.5s;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #1DB954;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s, transform 0.3s;
+    filter: drop-shadow(0 0 5px rgba(29, 185, 84, 0.8));
+}
+
+.controls button:hover {
+    color: #14833b;
+    transform: scale(1.2) rotate(-10deg);
+    text-shadow: 0 0 10px #1DB954;
+}
+
+/* Volume Control */
+#volume-control {
+    width: 100px;
+    background: linear-gradient(90deg, #1DB954, #14833b);
+    border-radius: 5px;
+}
+
+/* Playlist */
+.playlist ul {
+    list-style: none;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #1DB954 #121212;
+}
+
+.playlist li {
+    padding: 10px;
+    margin: 5px 0;
+    background-color: #1DB954;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.playlist li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: left 0.5s;
+    z-index: 0;
+}
+
+.playlist li:hover {
+    background-color: #14833b;
+    transform: scale(1.05);
+}
+
+.playlist li:hover::before {
+    left: 0;
+}
+
+.playlist i {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: white;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes rotateDisc {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseText {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Animasi */
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    50% { left: 100%; }
+    100% { left: -100%; }
+}
+
+@keyframes bgColorChange {
+    0% { background-color: #121212; }
+    100% { background-color: #333333; }
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes jello {
+    0%, 100% { transform: scale(1) rotate(0); }
+    25% { transform: scale(1.1) rotate(-3deg); }
+    50% { transform: scale(1.1) rotate(3deg); }
+    75% { transform: scale(1.1) rotate(-3deg); }
+}
+section:last-of-type {
+    margin-bottom: 100px; /* Atur jarak sesuai kebutuhan */
+}
+footer {
+    background-color: rgba(24, 24, 24, 0.6); /* Warna hitam transparan */
+    backdrop-filter: blur(10px); /* Efek blur */
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: slideInUp 1s;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Sedikit bayangan untuk memisahkan dari konten di atas */
+}
+/* Footer Styling */
+footer {
+    background-color: #121212;
+    padding: 2rem 1rem;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 -8px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Ikon Media Sosial */
+.icon-apk {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Gaya Ikon dengan Warna RGB */
+.icon-apk a {
+    font-size: 2.5rem;
+    transition: transform 0.3s, color 0.3s;
+    position: relative;
+    color: rgb(255, 255, 255); /* Putih Default */
+    animation: rgbIcon 2s infinite alternate;
+}
+
+/* Efek Hover */
+.icon-apk a:hover {
+    transform: scale(1.2) rotate(10deg);
+    filter: drop-shadow(0 0 15px white);
+}
+
+/* Teks Copyright */
+footer p {
+    font-size: 1rem;
+    color: #aaa;
+    margin: 0;
+}
+
+/* Efek Background Animasi Gradient */
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.2), rgba(0, 255, 0, 0.2), rgba(0, 0, 255, 0.2));
+    animation: rotateBg 20s linear infinite;
+    z-index: -1;
+    filter: blur(40px);
+}
+
+/* Animasi Background Gradient */
+@keyframes rotateBg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Animasi Warna RGB pada Ikon */
+@keyframes rgbIcon {
+    0% {
+        color: rgb(255, 0, 0); /* Merah */
+        filter: drop-shadow(0 0 10px rgb(255, 0, 0));
+    }
+    33% {
+        color: rgb(0, 255, 0); /* Hijau */
+        filter: drop-shadow(0 0 10px rgb(0, 255, 0));
+    }
+    66% {
+        color: rgb(0, 0, 255); /* Biru */
+        filter: drop-shadow(0 0 10px rgb(0, 0, 255));
+    }
+    100% {
+        color: rgb(255, 255, 255); /* Kembali Putih */
+        filter: drop-shadow(0 0 10px white);
+    }
+}

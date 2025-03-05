@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FayGoodBoy - Music</title>
+    <link rel="icon" href="profile.jpg" type="image/x-icon">
+    <!-- Animate.css -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+<!-- AOS (Animate On Scroll) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Boxicons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class='bx bxl-spotify'></i> FayGoodBoy
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#"><i class='bx bx-home'></i>Home</a></li>
+                    <li><a href="#"><i class='bx bx-music'></i>Playlist</a></li>
+                    <li><a href="#"><i class='bx bx-user'></i>About</a></li>
+                    <li><a href="#"><i class='bx bx-envelope'></i>Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Favorite Songs!</h1>
+        <p>Discover amazing music and playlists curated just for you.</p>
+        <button class="btn">Listen Now</button>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards container">
+        <div class="card">
+            <i class='bx bxs-music'></i>
+            <h3>Top Hits</h3>
+            <p>Enjoy the latest trending songs and chart-toppers.</p>
+        </div>
+        <div class="card">
+            <i class='bx bxs-headphone'></i>
+            <h3>Podcasts</h3>
+            <p>Listen to insightful podcasts from various genres.</p>
+        </div>
+        <div class="card">
+            <i class='bx bxs-radio'></i>
+            <h3>Radio</h3>
+            <p>Tune in to live radio stations from around the world.</p>
+        </div>
+    </section>
+
+    <!-- Music Player Section -->
+<section class="music-player container" data-aos="fade-up">
+    <h2><i class='bx bx-music'></i> Now Playing</h2>
+    
+    <div class="player">
+        <!-- Music Disc -->
+        <div class="music-disc" id="music-disc">
+            <i class='bx bx-disc'></i>
+        </div>
+
+        <audio id="audio-player" controls>
+            <source src="music/White Tee.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="song-info">
+            <h3 id="song-title">White Tee</h3>
+            <p id="song-artist">by FayGoodBoy</p>
+        </div>
+        
+        <!-- Additional Controls -->
+        <div class="controls">
+            <button onclick="shufflePlaylist()" title="Shuffle">
+                <i class='bx bx-shuffle'></i>
+            </button>
+            <button onclick="repeatSong()" title="Repeat">
+                <i class='bx bx-repeat'></i>
+            </button>
+            <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1" 
+                onchange="setVolume(this.value)" title="Volume">
+        </div>
+    </div>
+
+    <!-- Playlist Section -->
+    <div class="playlist">
+        <h3>Playlist</h3>
+        <ul id="playlist">
+            <li onclick="playSong('music/Smack That (Clean).mp3', 'Smack That', 'Akon')">
+                <i class='bx bx-play-circle'></i> Smack That
+            </li>
+            <li onclick="playSong('music/White Tee.mp3', 'White Tee', 'Summer Walker')">
+                <i class='bx bx-play-circle'></i> White Tee
+            </li>
+            <li onclick="playSong('music/Lil Tecca - Ransom (Official Music Video).mp3', 'Ransom', 'Lil Tecca')">
+                <i class='bx bx-play-circle'></i> Ransom
+            </li>
+            <li onclick="playSong('music/Dawin - Dessert (Audio).mp3', 'Dessert', 'Dawin')">
+                <i class='bx bx-play-circle'></i> Dessert
+            </li>
+            <li onclick="playSong('music/Work.mp3', 'Work', 'Mr.BakeOut')">
+                <i class='bx bx-play-circle'></i> Work
+            </li>
+        </ul>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        
+        <div class="icon-apk">
+            <a href="https://www.instagram.com/faygoodboy"><i class='bx bxl-instagram'></i></a>
+            <a href="https://www.tiktok.com/@faygoodboy"><i class='bx bxl-tiktok'></i></a>
+            <a href="https://wa.me/6281649335147"><i class='bx bxl-whatsapp'></i></a>
+        </div>
+        <p>&copy; 2025 FayGoodBoy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-in-out',
+        });
+    </script>
+    <!-- Link to JS -->
+    <script src="script.js"></script>
+</body>
+</html>
